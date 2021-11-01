@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Simmons Window Cleaning</string>
+    <string name="welcome">Welcome!</string>
+    <string name="new_user">New User</string>
+    <string name="existing_user">Existing User</string>
+    <string name="simmons_window_cleaning">Simmons Window Cleaning</string>
+    <string name="login">Login</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="sign_in">Sign In</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_address">Enter Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="confirm">Confirm</string>
+    <string name="request_service">Request Service</string>
+    <string name="file_complaint">File Complaint</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="about_us">About Us</string>
+    <string name="temp_value">TEMP VALUE</string>
+    <string name="job_address">Job Address:</string>
+    <string name="address">Address</string>
+    <string name="windows">Windows</string>
+    <string name="gutters">Gutters</string>
+    <string name="siding">Siding</string>
+    <string name="chandelier">Chandelier</string>
+    <string name="leaf_removal">Leaf Removal</string>
+    <string name="next">Next</string>
+</resources>
