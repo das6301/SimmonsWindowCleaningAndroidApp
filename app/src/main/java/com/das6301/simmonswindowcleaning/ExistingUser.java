@@ -2,6 +2,7 @@ package com.das6301.simmonswindowcleaning;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +11,13 @@ import android.widget.Toast;
 
 public class ExistingUser extends AppCompatActivity {
     Button loginBtn;
+
+    public void existingUserLoginBtn(View view){
+
+
+        Intent intent = new Intent(this, Homepage.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

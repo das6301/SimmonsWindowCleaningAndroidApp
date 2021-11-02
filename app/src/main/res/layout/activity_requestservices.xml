@@ -59,24 +59,24 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="@string/windows" />
-        <!--            android:onClick="onCheckboxClicked" />-->
+            android:text="@string/windows"
+            android:onClick="onCheckboxClicked" />
 
         <CheckBox
             android:id="@+id/checkbox_gutters"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="@string/gutters" />
-        <!--            android:onClick="onCheckboxClicked" />-->
+            android:text="@string/gutters"
+            android:onClick="onCheckboxClicked" />
 
         <CheckBox
             android:id="@+id/checkbox_siding"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="@string/siding" />
-        <!--            android:onClick="onCheckboxClicked" />-->
+            android:text="@string/siding"
+            android:onClick="onCheckboxClicked" />
 
         <CheckBox
             android:id="@+id/checkbox_chandelier"
@@ -90,7 +90,8 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:gravity="center"
-            android:text="@string/leaf_removal" />
+            android:text="@string/leaf_removal"
+            android:onClick="onCheckboxClicked" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -108,7 +109,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="50dp"
+        android:onClick="requestServiceNext"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

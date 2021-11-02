@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     /**
+     *  existingUser onClickListener
      *  Function for changing to activity_existing_user.xml
      */
     public void euBtnOnClick(View v){
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     *  newUser onClickListener
      *  Function for chaging to activity_new_user.xml
      */
     public void nuBtnOnClick(View v){

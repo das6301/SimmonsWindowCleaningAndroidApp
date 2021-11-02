@@ -61,6 +61,7 @@
         android:backgroundTint="@color/sky_blue"
         android:textColor="@color/black"
         android:textSize="15sp"
+        android:onClick="existingUserLoginBtn"
         />
 
  </LinearLayout>

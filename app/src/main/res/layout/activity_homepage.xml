@@ -38,16 +38,19 @@
             android:layout_margin="10dp"
             android:backgroundTint="@color/sky_blue"
             android:textColor="@color/black"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:onClick="requestService"/>
 
         <Button
+            android:id="@+id/fileComplaint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/file_complaint"
             android:layout_margin="10dp"
             android:backgroundTint="@color/sky_blue"
             android:textColor="@color/black"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:onClick="fileComplaint"/>
 
     </LinearLayout>
 
@@ -70,7 +73,8 @@
             android:layout_margin="10dp"
             android:backgroundTint="@color/sky_blue"
             android:textColor="@color/black"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:onClick="signOut"/>
 
         <Button
             android:id="@+id/aboutUs"
@@ -80,7 +84,8 @@
             android:layout_margin="10dp"
             android:backgroundTint="@color/sky_blue"
             android:textColor="@color/black"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:onClick="aboutUs"/>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/homepage_fab"
@@ -91,7 +96,8 @@
             android:layout_margin="10dp"
             android:backgroundTint="@color/sky_blue"
             android:textColor="@color/black"
-            android:textSize="15sp"/>
+            android:textSize="15sp"
+            android:onClick="fab"/>
 
     </LinearLayout>
 
