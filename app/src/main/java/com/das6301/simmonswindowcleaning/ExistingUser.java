@@ -10,11 +10,10 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class ExistingUser extends AppCompatActivity {
-    Button loginBtn;
+
 
     public void existingUserLoginBtn(View view){
-
-
+        Toast.makeText(getApplicationContext(), "Login BUTTON TOAST", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, Homepage.class);
         startActivity(intent);
     }
@@ -25,13 +24,7 @@ public class ExistingUser extends AppCompatActivity {
         setContentView(R.layout.activity_existing_user);
         System.out.println("LOADING EXISTING USER PAGE.");
 
-        loginBtn = findViewById(R.id.activity_existing_user_loginBtn);
-        loginBtn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view) {
-                System.out.println("LOGIN BUTTON SOUT");
-                Toast.makeText(getApplicationContext(), "Login BUTTON TOAST", Toast.LENGTH_SHORT).show();
-            }
-        });
+
     }
+
 }
