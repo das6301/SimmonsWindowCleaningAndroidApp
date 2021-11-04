@@ -30,4 +30,15 @@
     <string name="leaf_removal">Leaf Removal</string>
     <string name="next">Next</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="account_settings">Account Settings: </string>
+    <string name="update_username">Update Username: </string>
+    <string name="new_username">New Username</string>
+    <string name="update_name">Update Name: </string>
+    <string name="new_name">New Name</string>
+    <string name="update_address">Update Address: </string>
+    <string name="new_address">New Address</string>
+    <string name="new_number">New Number</string>
+    <string name="update_email">Update Email: </string>
+    <string name="new_email">New Email</string>
+    <string name="close">Close</string>
 </resources>

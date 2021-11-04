@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountInformation"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    >
+
+    <LinearLayout
+        android:id="@+id/fragment_account_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/fragment_account_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_settings"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <TextView
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:text="@string/update_username"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginEnd="10dp"/>
+
+            <EditText
+            android:id="@+id/newusername"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:hint="@string/new_username"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+
+                android:layout_width="175dp"
+                android:layout_height="50dp"
+                android:text="@string/update_name"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:id="@+id/newname"
+                android:layout_width="175dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:hint="@string/new_name"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+
+                android:layout_width="175dp"
+                android:layout_height="50dp"
+                android:text="@string/update_address"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:id="@+id/newaddress"
+                android:layout_width="175dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:inputType="textPostalAddress"
+                android:hint="@string/new_address"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+
+                android:layout_width="175dp"
+                android:layout_height="50dp"
+                android:text="Update Number:"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:id="@+id/newnum"
+                android:layout_width="175dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:inputType="phone"
+                android:hint="@string/new_number"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+
+                android:layout_width="175dp"
+                android:layout_height="50dp"
+                android:text="@string/update_email"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:id="@+id/newemail"
+                android:layout_width="175dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:hint="@string/new_email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="30dp">
+
+        <Button
+            android:id="@+id/update_fragment_btn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="160dp"
+            android:backgroundTint="@color/sky_blue"
+            android:text="@string/common_google_play_services_update_button"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:onClick="updateInfo"/>
+
+        <Button
+            android:id="@+id/close_fragment_btn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/sky_blue"
+            android:text="@string/close"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:onClick="closeFrag"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

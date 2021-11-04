@@ -34,7 +34,7 @@
         android:layout_marginBottom="25dp"
         android:background="@color/sky_blue"
         android:gravity="center"
-        android:hint="@string/enter_username"
+        android:hint="@string/enter_email"
         android:padding="5dp"
         android:textColor="@color/black"
         android:textSize="25sp" />
