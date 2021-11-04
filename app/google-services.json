@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "603904556697",
+    "project_id": "simmonswindowcleaning-cdb97",
+    "storage_bucket": "simmonswindowcleaning-cdb97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603904556697:android:88dafe19e3e1b2e8e7c208",
+        "android_client_info": {
+          "package_name": "com.das6301.simmonswindowcleaning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603904556697-rddb1thk7p1gmv67obb648nomsltdp99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6RZGOPbSpQo91l4r0uETT602flUgWnlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603904556697-rddb1thk7p1gmv67obb648nomsltdp99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

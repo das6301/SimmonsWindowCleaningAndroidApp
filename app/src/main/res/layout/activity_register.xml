@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewUser"
+    tools:context=".Register"
     android:background="@drawable/backgroundimage">
 
 
@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/activity_new_user_username_editText"
+            android:id="@+id/activity_register_username_editText"
             android:layout_width="225dp"
             android:layout_height="50dp"
             android:layout_marginBottom="25dp"
@@ -31,7 +31,7 @@
             android:textSize="25sp" />
 
         <EditText
-            android:id="@+id/activity_new_user_password_editText"
+            android:id="@+id/activity_register_password_editText"
             android:layout_width="225dp"
             android:layout_height="50dp"
             android:layout_marginBottom="25dp"
@@ -43,7 +43,7 @@
             android:textSize="25sp" />
 
         <EditText
-            android:id="@+id/activity_new_user_confirm_password_editText"
+            android:id="@+id/activity_register_confirm_password_editText"
             android:layout_width="225dp"
             android:layout_height="50dp"
             android:layout_marginBottom="25dp"
@@ -55,7 +55,7 @@
             android:textSize="25sp" />
 
         <EditText
-            android:id="@+id/activity_new_user_Name"
+            android:id="@+id/activity_register_Name"
             android:layout_width="225dp"
             android:layout_height="50dp"
             android:layout_marginBottom="25dp"
@@ -66,7 +66,7 @@
             android:textSize="25sp" />
 
         <EditText
-            android:id="@+id/activity_new_user_Address"
+            android:id="@+id/activity_register_Address"
             android:layout_width="225dp"
             android:layout_height="50dp"
             android:layout_marginBottom="25dp"
@@ -78,7 +78,7 @@
             android:textSize="25sp" />
 
         <EditText
-            android:id="@+id/activity_new_user_PhoneNumber"
+            android:id="@+id/activity_register_PhoneNumber"
             android:layout_width="225dp"
             android:layout_height="50dp"
             android:layout_marginBottom="25dp"
@@ -90,7 +90,7 @@
             android:textSize="25sp" />
 
         <EditText
-            android:id="@+id/activity_new_user_Email"
+            android:id="@+id/activity_register_Email"
             android:layout_width="225dp"
             android:layout_height="50dp"
             android:layout_marginBottom="25dp"
@@ -102,15 +102,22 @@
             android:textSize="25sp" />
 
         <Button
-            android:id="@+id/activity_new_user_confirm_button"
+            android:id="@+id/activity_register_confirm_button"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:backgroundTint="@color/sky_blue"
             android:text="@string/confirm"
             android:textColor="@color/black"
             android:textSize="15sp"
-            tools:ignore="SmallSp"
-            android:onClick="newUserConfirmBtn"/>
+            android:layout_marginBottom="25dp"
+            android:onClick="registerConfirmBtn"/>
+
+        <ProgressBar
+            android:id="@+id/activity_register_progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="invisible"
+            />
 
     </LinearLayout>
 
