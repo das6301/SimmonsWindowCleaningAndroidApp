@@ -25,6 +25,7 @@ public class AccountInformation extends Fragment {
     private String mParam1;
     private String mParam2;
 
+
     public AccountInformation() {
         // Required empty public constructor
     }

@@ -41,4 +41,5 @@
     <string name="update_email">Update Email: </string>
     <string name="new_email">New Email</string>
     <string name="close">Close</string>
+    <string name="update_number">Update Number:</string>
 </resources>
