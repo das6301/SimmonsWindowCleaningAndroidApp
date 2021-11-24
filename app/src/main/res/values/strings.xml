@@ -42,4 +42,34 @@
     <string name="new_email">New Email</string>
     <string name="close">Close</string>
     <string name="update_number">Update Number:</string>
+    <string name="title_activity_about_us">aboutUs</string>
+    <string name="previous">Previous</string>
+    <string name="services_you_requested">Services You Requested:</string>
+    <string name="click_on_a_service_to_view_more_details">Click on a Service to View more Details.</string>
+    <string name="other">Other</string>
+    <string name="what_service_would_you_like_done">What Service would you like done?</string>
+    <string name="enter_service">Enter Service</string>
+    <string name="final_project_for_cmpsc_475">FInal Project for CMPSC-475</string>
+    <string name="done_by_david_simmons">Done by David Simmons</string>
+    <string name="service">Service: </string>
+    <string name="description">Description: </string>
+    <string name="service_description">Service Description</string>
+
+    <string-array name="services_requested">
+        <item>Windows</item>
+        <item>Gutters</item>
+        <item>Siding</item>
+        <item>Chandelier</item>
+        <item>Leaf Removal</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="services_requested_description">
+        <item>Will clean all accessible windows that do not put us in harms way.</item>
+        <item>Will clean out all of the gutters on the job (Unclog any of the drains and path to them).</item>
+        <item>Will scrub the siding of your house removing all dirt/mold/moss/etc.</item>
+        <item>MUST BE HOME: Will clean whichever chandeliers you want cleaned in your home.</item>
+        <item>Will Rake your yard and remove the leaves from the premises.</item>
+        <item>Will try to accommodate your request as best we can.</item>
+    </string-array>
+
 </resources>

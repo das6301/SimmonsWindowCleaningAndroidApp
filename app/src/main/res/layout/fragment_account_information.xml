@@ -179,8 +179,7 @@
             android:text="@string/common_google_play_services_update_button"
             android:textColor="@color/black"
             android:textSize="12sp"
-            android:onClick="updateInfo"
-            tools:ignore="ButtonStyle,OnClick,UsingOnClickInXml" />
+            />
 
         <Button
             android:id="@+id/close_fragment_btn"

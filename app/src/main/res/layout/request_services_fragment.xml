@@ -1,18 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundimage"
+    android:gravity="center_horizontal"
+    >
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="70sp"
-            android:text="@string/temp_value"/>
 
-    </FrameLayout>
+    <TextView
+        android:id="@+id/frag_req_service_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical"
+        android:text="@string/services_you_requested"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/frag_req_service_instruction_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/click_on_a_service_to_view_more_details"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        />
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/frag_req_services_RV"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="500dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:layout_marginBottom="16dp"-->
+<!--        android:scrollbarStyle="outsideInset"-->
+<!--        android:scrollbars="vertical"-->
+<!--        app:fastScrollEnabled="false"-->
+<!--        />-->
+
+    <Button
+        android:id="@+id/frag_req_service_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/sky_blue"
+        android:text="@string/confirm"
+        />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

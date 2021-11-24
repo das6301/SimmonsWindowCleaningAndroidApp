@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -93,11 +94,61 @@
             android:text="@string/leaf_removal"
             android:onClick="onCheckboxClicked" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/temp_value" />
+        <CheckBox
+            android:id="@+id/checkbox_other"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/other"
+            android:onClick="onCheckboxClicked"
+            />
+
     </GridLayout>
+
+    <TextView
+        android:id="@+id/requestService_other_TV"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:background="@color/sky_blue"
+        android:text="@string/what_service_would_you_like_done"
+        android:textSize="15sp"
+        app:layout_constraintRight_toLeftOf="@+id/requestService_other_ET"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/requestService_gridlayout" />
+
+    <EditText
+        android:id="@+id/requestService_other_ET"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:background="@color/sky_blue"
+        android:hint="@string/enter_service"
+        android:textSize="15sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_container_view_RS"
+        app:layout_constraintLeft_toRightOf="@+id/requestService_other_TV"
+        app:layout_constraintTop_toBottomOf="@+id/requestService_gridlayout" />
+
+    <Button
+        android:id="@+id/displayServices"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="50dp"
+        android:backgroundTint="@color/sky_blue"
+        android:onClick="serviceDescription"
+        android:text="@string/service_description"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/requestService_nextbtn" />
 
     <Button
         android:id="@+id/requestService_nextbtn"
@@ -107,14 +158,19 @@
         android:textColor="@color/black"
         android:backgroundTint="@color/sky_blue"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/displayServices"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginBottom="50dp"
+        android:layout_marginLeft="50dp"
         android:onClick="requestServiceNext"/>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/requestServicesFragment"
+    <FrameLayout
+        android:id="@+id/fragment_container_view_RS"
+        android:name="com.das6301.simmonswindowcleaning.RequestServicesFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

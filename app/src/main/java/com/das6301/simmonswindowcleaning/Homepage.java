@@ -16,22 +16,32 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class Homepage extends AppCompatActivity {
 
-    TextView tv, welcomeTV, accInfotv;
+    TextView tv, welcomeTV;
+
     LinearLayout l1;
     LinearLayout l2;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
+    Boolean change = false;
     String uId;
     EditText enewuName,enewName, enewaddress, enewnum, enewemail;
     String s1, s2, s3, s4, s5;
+    DocumentReference dr;
+    DatabaseReference reference;
+
 
     /**
      *  requestServices onClickListener
@@ -64,6 +74,7 @@ public class Homepage extends AppCompatActivity {
      **/
     public void aboutUs(View view){
         //  TODO: CREATE ABOUT US CLASS AND LINK TO PAGE.
+        startActivity(new Intent(getApplicationContext(), aboutUs.class));
     }
 
     /**
@@ -72,7 +83,17 @@ public class Homepage extends AppCompatActivity {
     public void fab(View view){
 
 
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_account_info_container, new AccountInformation()).commit();
+        Bundle bundle = new Bundle();
+        bundle.putString("username", s1 );
+        bundle.putString("address", s2);
+        bundle.putString("email", s3);
+        bundle.putString("name", s4);
+        bundle.putString("phoneNum", s5);
+        getSupportFragmentManager()
+                .beginTransaction()
+                .setReorderingAllowed(true)
+                .add(R.id.fragment_account_info_container, AccountInformation.class, bundle)
+                .commit();
 
         tv = findViewById(R.id.homepage_welcome_textView);
         l1 = findViewById(R.id.hompage_lin1);
@@ -91,10 +112,10 @@ public class Homepage extends AppCompatActivity {
      *
      * @param view
      */
-    public void updateInfo(View view){
-        Toast.makeText(getApplicationContext(), "Update Info", Toast.LENGTH_SHORT).show();
-        //TODO: work on displaying/updating user info
-    }
+//    public void updateInfo(View view){
+//        Toast.makeText(getApplicationContext(), "Update Info", Toast.LENGTH_SHORT).show();
+//        //TODO: work on displaying/updating user info
+//    }
 
     /**
      *  closeFrag()
@@ -138,6 +159,16 @@ public class Homepage extends AppCompatActivity {
         addReplyDialog.create().show();
     }
 
+    public void update(String username, String address, String email, String name, String number, Boolean tf ){
+        s1 = username;
+        s2 = address;
+        s3 = email;
+        s4=name;
+        s5=number;
+        change = tf;
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -146,11 +177,16 @@ public class Homepage extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
         uId = fAuth.getCurrentUser().getUid();
-
+        reference = FirebaseDatabase.getInstance().getReference("users");
         welcomeTV = findViewById(R.id.homepage_welcome_textView);
-        //accInfotv = findViewById(R.id.t1username);
 
-        DocumentReference dr = fStore.collection("users").document(uId);
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
+        System.out.println(s4);
+        System.out.println(s5);
+
+        dr = fStore.collection("users").document(uId);
         dr.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
@@ -164,10 +200,11 @@ public class Homepage extends AppCompatActivity {
                     s3 = documentSnapshot.getString("email");
                     s4 = documentSnapshot.getString("name");
                     s5 = documentSnapshot.getString("phoneNum");
-                    System.out.println("Username: " + s1 +
-                            "\nAddress: " + s2 + "\nEmail: " + s3 +"\nName: " + s4 +"\nPhone Number: " + s5);
                 }
             }
         });
+
+
+
     }
 }
