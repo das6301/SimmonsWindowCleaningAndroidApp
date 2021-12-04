@@ -1,11 +1,20 @@
 package com.das6301.simmonswindowcleaning;
 
+/** Login page class
+ * @author David Simmons
+ *
+ * @version 1.0
+ * */
+
+
+
 import android.content.DialogInterface;
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -27,10 +36,18 @@ public class Login extends AppCompatActivity {
     FirebaseAuth mAuth;
 
 
+    /**
+     * loginLoginBtn(View view)
+     *
+     * Checks to make sure email and password values are set
+     * chekcs to see if the password is greater than 6. Then Authenticates
+     * the user information with Firebase.
+     *
+     * @param view
+     * */
     public void loginLoginBtn(View view){
+
         mAuth = FirebaseAuth.getInstance();
-
-
         EditText m_email = findViewById(R.id.activity_login_email_editText);
         EditText pword = findViewById(R.id.activity_login_password_editText);
         ProgressBar progressBar = findViewById(R.id.activity_login_progressBar);
@@ -72,6 +89,12 @@ public class Login extends AppCompatActivity {
         });
     }
 
+    /**
+     * forgotPassword(View view)
+     *
+     * Asks the user if they want to reset their password. Makes a
+     * Dialog and then will send the password reset to the users
+     * email.*/
     public void forgotPassword(View view){
         TextView forgotpassword = findViewById(R.id.forgotPassword);
         mAuth = FirebaseAuth.getInstance();

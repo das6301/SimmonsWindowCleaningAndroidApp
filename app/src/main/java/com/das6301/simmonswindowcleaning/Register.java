@@ -1,4 +1,10 @@
 package com.das6301.simmonswindowcleaning;
+/**
+ * Allows users to make an account and stores the information in firebase
+ *
+ * @author David Simmons
+ * @version 1.0
+ * */
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,9 +30,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static android.content.ContentValues.TAG;
-//import com.google.firebase.firestore.DocumentReference;
-//import com.google.firebase.firestore.FirebaseFirestore;
 
+//TODO: GET ROOM DB TO WORK REPLACE THE FIREBASE DB STORAGE WITH ROOM.
 
 public class Register extends AppCompatActivity {
 
@@ -36,7 +41,11 @@ public class Register extends AppCompatActivity {
     String userID;
     ProgressBar progressBar;
 
-
+    /**
+     * registerConfirmBtn(View view)
+     *
+     * Stores all the user information and does the error checking
+     */
     public void registerConfirmBtn(View view){
         // Current instance of the database
         mAuth = FirebaseAuth.getInstance();
@@ -129,10 +138,6 @@ public class Register extends AppCompatActivity {
                 }
             }
         });
-
-
-
-
     }
 
     @Override

@@ -1,16 +1,29 @@
 package com.das6301.simmonswindowcleaning;
+/**
+ * DisplayServices for RecyclerView
+ *
+ * @author David Simmons
+ * @version 1.0
+ * */
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 
-public class DisplayServicies extends AppCompatActivity {
+public class DisplayServices extends AppCompatActivity {
 
-    String services[], servicesDesc[];
+    String[] services;
+    String[] servicesDesc;
     RecyclerView recyclerView;
 
+
+    /**
+     * onCreate(Bundle savedInstanceState)
+     *
+     * Populates the RecyclerView
+     * */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,8 +1,11 @@
 package com.das6301.simmonswindowcleaning;
-
+/**
+ * Allows users to request the services they want to have done.
+ *
+ * @author David Simmons
+ * @version 1.0
+ * */
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,15 +22,16 @@ public class RequestServices extends AppCompatActivity {
     TextView rsOtherTV;
 
     /**
-     *  onCheckboxClicked onClickListener
+     *  onCheckboxClicked(View view)
+     *
+     *  Returns the values of CheckBoxs that are clicked.
      */
     public void onCheckboxClicked(View view){
-        // TODO: MAKE THE CHECKBOX CLICKED VALUES
         boolean isChecked = ((CheckBox) view).isChecked();
         rsOtherET = findViewById(R.id.requestService_other_ET);
         rsOtherTV = findViewById(R.id.requestService_other_TV);
 
-
+        //  Switch cases for all the CheckBox
         switch (view.getId()){
             case R.id.checkbox_windows:
                 if (isChecked ){
@@ -74,19 +78,20 @@ public class RequestServices extends AppCompatActivity {
                     rsOtherTV.setVisibility(View.VISIBLE);
                     rsOtherET.setVisibility(View.VISIBLE);
                     other = rsOtherET.getText().toString().trim();
-                    System.out.println("Other Checked.");
                 }else{
 
                     rsOtherTV.setVisibility(View.GONE);
                     rsOtherET.setVisibility(View.GONE);
-                    siding = "";
+
                 }
                 break;
         }
     }
 
     /**
-     *  requestServicesNext onClickListener
+     *  requestServicesNext(View view)
+     *
+     *  Opens up the RequestServicesFragment().
      */
     public void requestServiceNext(View view){
         EditText editText = findViewById(R.id.jobaddress_requestservices_edittext);
@@ -99,14 +104,15 @@ public class RequestServices extends AppCompatActivity {
         }
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container_view_RS, new RequestServicesFragment()).commit();
 
-
-        System.out.println("Services Selected: " + windows + " " + gutters + " " + chandelier + " " + leaves  + " " + siding);
-
     }
 
+    /**
+     * servicesDescription(View view)
+     *
+     * Opens up the RecyclerView to show all the service description
+     * */
     public void serviceDescription(View view){
-        startActivity(new Intent(this, DisplayServicies.class));
-
+        startActivity(new Intent(this, DisplayServices.class));
     }
 
     @Override

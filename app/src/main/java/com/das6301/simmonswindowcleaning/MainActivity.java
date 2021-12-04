@@ -1,13 +1,19 @@
 package com.das6301.simmonswindowcleaning;
 
-import androidx.appcompat.app.AppCompatActivity;
+/**
+ * MainActivity showing New and Existing User Button
+ * @author David Simmons
+ * @version 1.0
+ * */
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 
 public class MainActivity extends AppCompatActivity {
+
 
     /**
      *  existingUser onClickListener
@@ -31,6 +37,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_page);
-
     }
 }

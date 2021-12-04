@@ -1,5 +1,10 @@
 package com.das6301.simmonswindowcleaning;
-
+/**
+ * The adapter class for DisplayServices RecyclerView
+ *
+ * @author David Simmons
+ * @version 1.0
+ * */
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

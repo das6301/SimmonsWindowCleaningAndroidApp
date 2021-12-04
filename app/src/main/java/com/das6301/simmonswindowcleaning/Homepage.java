@@ -73,7 +73,6 @@ public class Homepage extends AppCompatActivity {
      *  links to the aboutUs.xml
      **/
     public void aboutUs(View view){
-        //  TODO: CREATE ABOUT US CLASS AND LINK TO PAGE.
         startActivity(new Intent(getApplicationContext(), aboutUs.class));
     }
 
